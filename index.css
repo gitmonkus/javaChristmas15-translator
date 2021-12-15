@@ -1,0 +1,141 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--snow);
+    background: url(img/gift.jpg) no-repeat;
+    background-size: cover;
+    font-family: 'Mountains of Christmas', cursive;
+}
+.outer-container {
+    background: rgba(255, 255, 255, .8);
+    min-height: 400px;
+    min-width: 270px;
+    padding: 80px;
+    position: relative;
+
+}
+.play-jingle {
+    position: absolute;
+    font-family: inherit;
+    border: 2px dashed var(--bright-red);
+    padding: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 100%;
+    top: -5%;
+    left: 0;
+    font-size: 30px;
+    color: var(--dark-green);
+    transition: all .2s ease-in-out;
+}
+.play-jingle:hover,
+.play-jingle:focus {
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 20px var(--bright-red);
+    transform: translateY(-5px);
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    margin: 2em 0;
+    flex-direction: column;
+    min-width: 100%;
+    background: rgba(255, 255, 255, .8);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+h1 { 
+    margin: 0;
+    font-size: 50px;
+    color: var(--snow);
+    text-shadow: 2px 2px 1px var(--bright-red);
+}
+
+.greeting-text {
+    color: var(--bright-red);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.animate{
+    animation: greeting 2s;
+}
+
+
+select {
+    height: 50px;
+    width: 260px;
+    border: 3px solid var(--light-green);
+    padding: 0.2em 0.3em;
+    margin: 0;
+    font-size: 20px;
+    color: var(--dark-green);    
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    outline: none;
+}
+select:focus {
+        border: 2px dashed var(--bright-red);
+
+}
+.select-container {
+    color: var(--light-green);
+    text-shadow: 2px 2px 1px var(--snow);
+    font-weight: bold;
+    font-size: 20px;
+}
+.red-elf,
+.green-elf,
+.blue-elf {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+}
+
+.red-elf {
+    bottom: -10%;
+    right: 10%;
+    transform: rotate(25deg);
+}
+.green-elf {
+    top: 0;
+    left: -5%;
+    transform: rotate(45deg);
+}
+
+.blue-elf {
+    top: 0;
+    right: -5%;
+    transform: rotate(-45deg);
+}
+
+@keyframes greeting {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
